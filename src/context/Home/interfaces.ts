@@ -6,5 +6,9 @@ export interface HomeContextProviderProps {
 
 export interface HomeContextData {
   darkTheme: boolean
+  email: string
+  senha: string
+  setEmail: (value: string) => void;
+  setSenha: (value: string) => void;
   updateTheme: (value: number) => void
 }

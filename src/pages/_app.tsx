@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 
 import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
-import HomeContextProvider from '../context/HomeContext'
+import HomeContextProvider from '../context/Home/HomeContext'
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>

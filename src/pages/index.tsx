@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Home from '../pages/Home'
+import Home from './Home'
 import Login from './Login'
 const Router: React.FC = () => {
 
-  return <Home />
+  return <Login />
 }
 
 export default Router

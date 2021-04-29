@@ -4,6 +4,8 @@ export const HomeContext = createContext({} as HomeContextData)
 
 const HomeContextProvider = ({ children }: HomeContextProviderProps) => {
   const [darkTheme] = useState(false)
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
 
   useEffect(() => {
     console.log('')
@@ -13,7 +15,14 @@ const HomeContextProvider = ({ children }: HomeContextProviderProps) => {
   }
 
   return (
-    <HomeContext.Provider value={{ darkTheme, updateTheme }}>
+    <HomeContext.Provider value={{
+      darkTheme,
+      updateTheme,
+      email,
+      senha,
+      setEmail,
+      setSenha
+    }}>
       {children}
     </HomeContext.Provider>
   )
