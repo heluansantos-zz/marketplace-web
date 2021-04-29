@@ -1,20 +1,10 @@
-import React, { useContext } from 'react'
-import Head from 'next/head'
+import React from 'react'
 
-import { Container } from '../styles/pages/Home'
-import { HomeContext } from '../context/HomeContext'
+import Home from '../pages/Home'
+import Login from './Login'
+const Router: React.FC = () => {
 
-const Home: React.FC = () => {
-  const { darkTheme } = useContext(HomeContext)
-  return (
-    <Container>
-      <Head>
-        <title>Homepage</title>
-      </Head>
-      <h1>ReactJS Structure</h1>
-      <p>A ReactJS + Next.js structure made by Hevolsoft.</p>
-    </Container>
-  )
+  return <Home />
 }
 
-export default Home
+export default Router
