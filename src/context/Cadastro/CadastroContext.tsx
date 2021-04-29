@@ -12,7 +12,8 @@ const CadastroContextProvider = ({ children }: CadastroContextProviderProps) => 
 
   useEffect(() => {
     console.log('')
-  }, [])
+  }, [setNome])
+  
   const updateTheme = (index: number) => {
     console.log(darkTheme)
   }

@@ -31,7 +31,6 @@ import {
 } from './styles';
 import { CadastroContext } from '../../context/Cadastro/CadastroContext';
 
-
 const Home: React.FC = () => {
   const {
     darkTheme,
@@ -45,7 +44,7 @@ const Home: React.FC = () => {
     setDataNasc,
     setEmail,
     setSenha
-  } = useContext(CadastroContext)
+  } = useContext(CadastroContext);
   return (
     <Container>
       <Head>
@@ -69,20 +68,20 @@ const Home: React.FC = () => {
             <Date>
               <Item>
                 <Title>Nome</Title>
-                <Input placeholder="Insira seu nome" type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+                <Input placeholder="Insira seu nome" value={nome} onChange={(e) => setNome(e.target.value)} />
               </Item>
               <Item>
                 <Title>CPF</Title>
-                <Input placeholder="000.000.000-00" type="text" value={cpf} onChange={(e) => setCpf(e.target.value)} />
+                <Input placeholder="000.000.000-00" value={cpf} onChange={(e) => setCpf(e.target.value)} />
               </Item>
               <Data>
                 <Title>Data de Nascimento</Title>
-                <Input placeholder="Selecione uma data" type="text" value={dataNasc} onChange={(e) => setDataNasc(e.target.value)} />
+                <Input placeholder="Selecione uma data" value={dataNasc} onChange={(e) => setDataNasc(e.target.value)} />
                 <BiCalendarAlt />
               </Data>
               <Item>
                 <Title>Email</Title>
-                <Input placeholder="Insira sua senha" type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <Input placeholder="Insira sua senha" value={email} onChange={(e) => setEmail(e.target.value)} />
               </Item>
               <Item>
                 <Title>Senha</Title>
