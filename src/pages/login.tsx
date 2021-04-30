@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import Head from 'next/head';
-import LogoImg from '../../images/logo.png';
+import LogoImg from '../images/logo.png';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BiHelpCircle } from 'react-icons/bi';
+import { useRouter } from 'next/router'
 import {
   Container,
   RetangleLeft,
@@ -23,11 +24,12 @@ import {
   Input,
   Entrar,
   CadastreSe
-} from './styles';
-import { HomeContext } from '../../context/Home/HomeContext';
+} from '../styles/pages/Login';
+import { HomeContext } from '../context/Home/HomeContext';
 
 
 const Home: React.FC = () => {
+  const router = useRouter()
   const {
     darkTheme,
     email,
@@ -47,7 +49,9 @@ const Home: React.FC = () => {
         <Content>
           <Form>
             <TopForm>
-              <Back href="/"><BsChevronLeft /> <p> Voltar</p></Back>
+              <Back onClick={() => router.push('/')} >
+                <BsChevronLeft /> <p> Voltar</p>
+              </Back>
               <Info2 href="/"><BiHelpCircle /> Preciso de ajuda</Info2>
             </TopForm>
             <Wellcome>
@@ -66,7 +70,8 @@ const Home: React.FC = () => {
             </Date>
             <Entrar href="/">Entrar</Entrar>
             <CadastreSe>
-              <p>Não possui uma conta?</p> <a href="/Cadastro">Cadastre-se</a>
+              <p>Não possui uma conta?</p>
+              <a onClick={() => router.push('/cadastro')} > Cadastre - se</a>
             </CadastreSe>
           </Form>
           <Info><BiHelpCircle /> Preciso de ajuda</Info>

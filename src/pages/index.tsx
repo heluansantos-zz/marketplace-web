@@ -1,10 +1,18 @@
-import React from 'react'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
-import Home from './Home'
-import Login from './Login'
-const Router: React.FC = () => {
+// Here you would fetch and return the user
+const useUser = () => ({ user: null, loading: false })
 
-  return <Login />
+export default function Page() {
+  const { user, loading } = useUser()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (!(user || loading)) {
+      router.push('/login')
+    }
+  }, [user, loading])
+
+  return <p>Redirecting...</p>
 }
-
-export default Router

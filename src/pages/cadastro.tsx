@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import Head from 'next/head';
-import LogoImg from '../../images/logo.png';
+import LogoImg from '../images/logo.png';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BiHelpCircle } from 'react-icons/bi';
+import { useRouter } from 'next/router'
 import { BiCalendarAlt, BiInfoCircle } from 'react-icons/bi';
 import {
   Container,
@@ -28,10 +29,11 @@ import {
   LinkTermo,
   Termos,
   Data
-} from './styles';
-import { CadastroContext } from '../../context/Cadastro/CadastroContext';
+} from '../styles/pages/Cadastro';
+import { CadastroContext } from '../context/Cadastro/CadastroContext';
 
 const Home: React.FC = () => {
+  const router = useRouter()
   const {
     darkTheme,
     nome,
@@ -57,7 +59,7 @@ const Home: React.FC = () => {
         <Content>
           <Form>
             <TopForm>
-              <Back href="/"><BsChevronLeft /> <p> Voltar</p></Back>
+              <Back onClick={()=> router.push('/login')}><BsChevronLeft /> <p> Voltar</p></Back>
               <Info2 href="/"><BiHelpCircle /> Preciso de ajuda</Info2>
             </TopForm>
             <Wellcome>
