@@ -25,7 +25,7 @@ import {
   Entrar,
   CadastreSe
 } from '../styles/pages/Login';
-import { HomeContext } from '../context/Home/HomeContext';
+import { Context } from '../context/GlobalContext';
 
 
 const Home: React.FC = () => {
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
     senha,
     setEmail,
     setSenha
-  } = useContext(HomeContext)
+  } = useContext(Context)
   return (
     <Container>
       <Head>

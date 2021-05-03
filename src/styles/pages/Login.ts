@@ -196,6 +196,7 @@ export const CadastreSe = styled.div`
     a{
         color: var(--s);
         margin-left: 10px;
+        cursor: pointer;
     }
     
 `

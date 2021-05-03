@@ -30,23 +30,23 @@ import {
   Termos,
   Data
 } from '../styles/pages/Cadastro';
-import { CadastroContext } from '../context/Cadastro/CadastroContext';
+import { Context } from '../context/GlobalContext';
 
-const Home: React.FC = () => {
+const Cadastro: React.FC = () => {
   const router = useRouter()
   const {
     darkTheme,
-    nome,
+    nomepf,
     cpf,
     dataNasc,
-    email,
-    senha,
-    setNome,
+    emailpf,
+    senhapf,
+    setNomePf,
     setCpf,
     setDataNasc,
-    setEmail,
-    setSenha
-  } = useContext(CadastroContext);
+    setEmailPf,
+    setSenhaPf
+  } = useContext(Context);
   return (
     <Container>
       <Head>
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
             <Date>
               <Item>
                 <Title>Nome</Title>
-                <Input placeholder="Insira seu nome" value={nome} onChange={(e) => setNome(e.target.value)} />
+                <Input placeholder="Insira seu nome" value={nomepf} onChange={(e) => setNomePf(e.target.value)} />
               </Item>
               <Item>
                 <Title>CPF</Title>
@@ -83,11 +83,11 @@ const Home: React.FC = () => {
               </Data>
               <Item>
                 <Title>Email</Title>
-                <Input placeholder="Insira sua senha" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <Input placeholder="Insira sua senha" value={emailpf} onChange={(e) => setEmailPf(e.target.value)} />
               </Item>
               <Item>
                 <Title>Senha</Title>
-                <Input placeholder="Insira sua senha" type="password" value={senha} onChange={(e) => setSenha(e.target.value)} />
+                <Input placeholder="Insira sua senha" type="password" value={senhapf} onChange={(e) => setSenhaPf(e.target.value)} />
                 <Aviso>
                   <BiInfoCircle /><p>A senha deve possuir pelo menos 6 caracteres</p>
                 </Aviso>
@@ -108,4 +108,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default Cadastro;
