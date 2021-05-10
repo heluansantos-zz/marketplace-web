@@ -125,7 +125,7 @@ export const Back = styled.a`
 `
 export const Wellcome = styled.div`
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -150,7 +150,7 @@ export const H5 = styled.h5`
 `
 export const Progress = styled.div`
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,17 +175,9 @@ export const CircleOff = styled.div`
     align-items: center;
     justify-content: center;
 `
-export const ProgressInitial = styled.div`
-    width: 41%;
-    border: 1px solid var(--gray);
-`
-export const BarInitial = styled.div`
-    width: 1%;
-    border: 2px solid var(--blue);
-`
 export const BarOn = styled.div`
     width: 42%;
-    border: 2px solid var(--blue);
+    border: 1px solid var(--blue);
 `
 export const BarOff = styled.div`
     width: 42%;
@@ -193,30 +185,31 @@ export const BarOff = styled.div`
 `
 export const Date = styled.div`
     width: 100%;
-    margin-Bottom: 10px;
+    margin-bottom: 8px;
 `
 export const Item = styled.div`
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
 `
 export const Items = styled.div`
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
 `
 export const ItemLeft = styled.div`
-    width: 65%;
+    width: 57%;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 `
 export const ItemRight = styled.div`
-    width: 30%;
+    width: 38%;
     margin-left: 5%;
     margin-bottom: 10px;
     display: flex;
@@ -230,7 +223,7 @@ export const Title = styled.p`
 `
 export const Input = styled.input`
     width: 100%;
-    height: 35px;
+    height: 30px;
     padding: 5px 0 5px 15px;
     background-color: var(--c1);
     font-size: 80%;
@@ -243,13 +236,13 @@ export const InputError = styled.input`
     height: 35px;
     padding: 5px 0 5px 15px;
     background-color: var(--c1);
-    font-size: 80%;
+    font-size: 75%;
     border-radius: 10px;
     border: 1px solid red;
     outline: none;
 `
 export const Select = styled.div`
-    width: 30%;
+    width: 38%;
     margin-left: 5%;
     margin-bottom: 10px;
     display: flex;
@@ -260,12 +253,29 @@ export const Select = styled.div`
         font-size: 80%;
         color: var(--c8);
         width: 100%;
-        height: 35px;
+        height: 30px;
         border: none;
         outline: none;
         cursor: pointer;
         border-radius: 8px;
-
+    }
+`
+export const SelectBanco = styled.div`
+    width: 57%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    select {
+        background-color: var(--c1);
+        padding: 0 15px;
+        font-size: 80%;
+        color: var(--c8);
+        width: 100%;
+        height: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 8px;
     }
 `
 export const Prefere = styled.div`

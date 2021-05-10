@@ -18,14 +18,13 @@ import {
   CircleOn,
   CircleOff,
   BarOn,
-  BarInitial,
-  ProgressInitial,
   ItemLeft,
   Items,
   ItemRight,
   Select,
   NoCEP,
-  Prefere
+  Prefere,
+  BarOff
 } from './styles';
 import { Context } from '../../context/GlobalContext';
 
@@ -59,8 +58,7 @@ export default function Cadastro() {
         <CircleOn>1</CircleOn>
         <BarOn></BarOn>
         <CircleOn>2</CircleOn>
-        <BarInitial></BarInitial>
-        <ProgressInitial></ProgressInitial>
+        <BarOff></BarOff>
         <CircleOff>3</CircleOff>
       </Progress>
       <Date>

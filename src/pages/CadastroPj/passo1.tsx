@@ -13,8 +13,6 @@ import {
     CircleOn,
     BarOff,
     CircleOff,
-    BarInitial,
-    ProgressInitial
 } from './styles';
 import { Context } from '../../context/GlobalContext';
 
@@ -45,8 +43,7 @@ export default function Passo1() {
             </Wellcome>
             <Progress>
                 <CircleOn>1</CircleOn>
-                <BarInitial></BarInitial>
-                <ProgressInitial></ProgressInitial>
+                <BarOff></BarOff>
                 <CircleOff>2</CircleOff>
                 <BarOff></BarOff>
                 <CircleOff>3</CircleOff>
