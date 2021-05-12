@@ -7,7 +7,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   :root{
-    --pme2: #7D8EB2
+    --pme2: #7D8EB2;
     --pme1: #5C7099;
     --p: #3C4F76;
     --pma1: #283859;

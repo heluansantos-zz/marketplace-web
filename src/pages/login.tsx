@@ -68,7 +68,7 @@ const Home: React.FC = () => {
                 <Input placeholder="Insira sua senha" type="password" value={senha} onChange={(e) => setSenha(e.target.value)} />
               </Item>
             </Date>
-            <Entrar href="/">Entrar</Entrar>
+            <Entrar href="/principal">Entrar</Entrar>
             <CadastreSe>
               <p>Não possui uma conta?</p>
               <a onClick={() => router.push('/cadastro')} > Cadastre - se</a>
