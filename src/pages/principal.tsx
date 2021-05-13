@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import TopMenu from '../components/Header/TopMenu/TopBar';
-import BottomMenu from '../components/Header/BottomMenu/TopBar';
-
+import NavBar from '../components/Header/NavBar';
+import Footer from '../components/Footer/Container';
 import {
     Container
 } from '../styles/pages/principal';
@@ -13,8 +12,8 @@ const Principal: React.FC = () => {
             <Head>
                 <title>Tela Inicial</title>
             </Head>
-            <TopMenu />
-            <BottomMenu />
+            <NavBar />
+            <Footer />
         </Container>
     );
 }

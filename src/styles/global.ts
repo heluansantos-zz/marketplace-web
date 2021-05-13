@@ -34,6 +34,10 @@ export default createGlobalStyle`
     --c9: #56565A;
     --c10: #313033;
 
+    --pFooterDark: #233B6C;
+    --footer: #1A1A1A;
+    --black: #000000;
+    --white: #FFFFFF;
     --gray: #9BB9D5;
     --blue: #045096;
     --blue2: #3B5998;

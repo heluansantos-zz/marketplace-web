@@ -8,6 +8,7 @@ const TopBarContainer = styled.div`
     align-items: center;
     background-color: var(--pma1);
     height: 2.5rem;
+    width: 100%;
     @media(min-width: 760px){
         height: 2.2rem;
     }
