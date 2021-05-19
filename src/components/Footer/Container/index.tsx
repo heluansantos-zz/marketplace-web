@@ -4,7 +4,7 @@ import FooterContent from '../Content';
 
 const FooterContainer = styled.footer`
     background-color: var(--footer);
-    margin-top: 242px;
+    margin-top: 50px;
     @media(min-width: 768px) {
         display: flex;
         justify-content: center;

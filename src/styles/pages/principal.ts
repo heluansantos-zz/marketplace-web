@@ -25,7 +25,6 @@ export const PrincipalTop = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
 `
 export const Categorias = styled.section`
     width: 20%;
@@ -57,7 +56,7 @@ export const CategoriaLista = styled.ul`
 export const Title = styled.h2`
     width: 200px;
     margin-right: auto;
-    margin-left: 6%;
+    margin-left: 3%;
     margin-bottom: 15px;
     font-size: 90%;
     color: #233B6C;
@@ -84,25 +83,25 @@ export const Produtos = styled.section`
     justify-content: space-between;
 `
 export const Novidades = styled.section`
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 `
 export const MaisComprados = styled.section`
     width: 100%;
-
-`
-export const BelezaESaude = styled.section`
-    width: 100%;
-
+    padding-top: 20px;
 `
 export const CategoriaEmDestaque = styled.section`
     width: 100%;
-
+    ${Produtos}{
+        padding: 0 50px;
+    }
+    padding-top: 20px;
 `
 export const MaisAcessados = styled.section`
     width: 100%;
-
+    margin-top: 30px;
 `
 export const ProdutoFavorito = styled.div`
     color: #4D4D4D;
@@ -125,24 +124,52 @@ export const Item = styled.div`
     align-items: center;
     justify-content: space-between;
     :hover{
+        -webkit-box-shadow: 4px 6px 11px -7px rgba(0,0,0,0.83); 
+        box-shadow: 4px 6px 11px -7px rgba(0,0,0,0.83);
         ${ProdutoFavorito}{
             opacity: 1;
         }
     }
 `
+export const BelezaESaude = styled.section`
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: #E1E6F1;
+    ${Item}{
+        background-color: #ffffff;
+    }
+`
 export const ButtonPrev = styled.button`
     width: 25px;
     height: 35px;
-    background-color: #1976D2;
-    opacity: 0.2;
+    background-color: #E5F1FE;
     margin-left: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    svg{
+        opacity: 1;
+        width: 10px;
+        height: 20px;
+        color: #1976D2; 
+    }
 `
 export const ButtonNext = styled.button`
     width: 25px;
     height: 35px;
-    background-color: #1976D2;
-    opacity: 0.2;
+    background-color: #E5F1FE;
     margin-right: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    svg{
+        opacity: 1;
+        width: 10px;
+        height: 20px;
+        color: #1976D2;
+    }
 `
 export const ExibeProduto = styled.div`
     display:flex;
@@ -176,7 +203,6 @@ export const ProdutoOu = styled.p`
     color: #4D4D4D;
     font-size: 90%;
 `
-
 export const ProdutoButton = styled.button`
     width: 90%;
     height: 30px;
@@ -200,4 +226,41 @@ export const ProdutoButton = styled.button`
         opacity: 1;
 
     }
+`
+export const ProudutoEmDestaque = styled.div`
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`
+export const InfoProdutoEmDestaque = styled.div`
+    width: 150px;
+    height: 150px;
+    border-radius: 90px;
+    background: rgb(58,83,135);
+    background: linear-gradient(180deg, rgba(58,83,135,1) 0%, rgba(54,111,227,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+export const ImgProdutoEmDestaque = styled.img`
+    height: 70px;
+`
+export const TitleProdutoEmDestaque = styled.h3`
+    margin-top: 15px;
+    color: #4D4D4D;
+`
+export const ExploreMais = styled.div`
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    border: 1px solid #4D4D4D;
+    color: #4D4D4D;
+    background-color: #EFEFEF;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
