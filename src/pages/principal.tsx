@@ -8,10 +8,12 @@ import ImgProduto3 from '../images/produto3.png';
 import ImgProduto4 from '../images/produto4.png';
 import ImgProduto5 from '../images/produto5.png';
 import ImgProduto6 from '../images/produto6.png';
+import Televisao from   '../images/televisao.png';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { BiShoppingBag } from 'react-icons/bi';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-
+import { TiLocation } from 'react-icons/ti';
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 import { dadosProdutoTop } from '../Data/produtosTop';
 import { dadosUltimasNovidades } from '../Data/ultimasNovidades';
 import { dadosMaisComprados } from '../Data/maisComprados';
@@ -23,6 +25,16 @@ import {
     BelezaESaude,
     ButtonNext,
     ButtonPrev,
+    Carousel,
+    CarouselButtomNext,
+    CarouselButtomPrev,
+    CarouselContent,
+    CarouselDe,
+    CarouselImg,
+    CarouselItem,
+    CarouselLocal,
+    CarouselPor,
+    CarouselTitle,
     CategoriaEmDestaque,
     CategoriaItems,
     CategoriaLista,
@@ -53,6 +65,7 @@ import {
     Title,
     TitleProdutoEmDestaque
 } from '../styles/pages/principal';
+
 const Principal: React.FC = () => {
 
     const [favoritoState, setFavoritoState] = useState(false);
@@ -71,6 +84,19 @@ const Principal: React.FC = () => {
                 <title>Tela Inicial</title>
             </Head>
             <NavBar />
+            <Carousel>
+                <CarouselButtomPrev><HiOutlineChevronLeft /></CarouselButtomPrev>
+                <CarouselContent>
+                    <CarouselTitle>Televisão 40’’ - Samsung</CarouselTitle>
+                    <CarouselDe>de R$4.700,00 por</CarouselDe>
+                    <CarouselPor>R$3.900,00</CarouselPor>
+                    <CarouselLocal><TiLocation />Pau dos Ferros</CarouselLocal>
+                </CarouselContent>
+                <CarouselItem>
+                    <CarouselImg src={Televisao}/>
+                </CarouselItem>
+                <CarouselButtomNext><HiOutlineChevronRight /></CarouselButtomNext>
+            </Carousel>
             <PrincipalTop>
                 <Categorias>
                     <CategoriaOptions>

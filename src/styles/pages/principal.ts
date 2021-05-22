@@ -20,6 +20,95 @@ export const Menu = styled.div`
         width: 200px;
     }
 `
+export const CarouselButtomPrev = styled.button`
+    width: 25px;
+    height: 35px;
+    background-color: transparent;
+    color: #ffffff;
+    position: absolute;
+    margin: auto auto auto 30px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: none;
+    svg{
+        font-size: 3rem;
+    }
+`
+export const CarouselButtomNext = styled.button`
+    width: 25px;
+    height: 35px;
+    background-color: transparent;
+    color: #ffffff;
+    position: absolute;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: 94%;
+    margin-bottom: auto;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: none;
+    svg{
+        font-size: 3rem;
+    }
+`
+export const Carousel = styled.div`
+    width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(58,83,135);
+    background: linear-gradient(90deg, rgba(58,83,135,1) 0%, rgba(54,111,227,1) 100%);
+    position: relative;
+    margin-bottom: 30px;
+
+    :hover{
+        ${CarouselButtomNext}{
+            display: inline;
+        }
+        ${CarouselButtomPrev}{
+            display: inline;
+        }
+    }
+`
+export const CarouselContent = styled.div`
+    width: 50%;
+    padding: 0 10%;
+`
+export const CarouselTitle = styled.h2`
+    margin-bottom: 5px;
+`
+export const CarouselDe = styled.p`
+    color: #C4C4C4;
+`
+export const CarouselPor = styled.p`
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+`
+export const CarouselLocal = styled.div`
+    svg{
+        margin-right: 5px;
+    }
+`
+export const CarouselItem = styled.div`
+    width: 50%;
+    padding: 0 10%;
+`
+export const CarouselImg = styled.img`
+    height: 200px;
+`
+export const CarrouselNavigation = styled.div`
+
+`
+export const CarouselNavigationItemOn = styled.div`
+
+`
+export const CarouselNavigationItemOff = styled.div`
+
+`
 export const PrincipalTop = styled.div`
     width: 100%;
     display: flex;
