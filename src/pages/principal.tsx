@@ -20,7 +20,6 @@ import { dadosMaisComprados } from '../Data/maisComprados';
 import { dadosBelezaESaude } from '../Data/belezaEsaude';
 import { dadosEmDestaque } from '../Data/emDestaque';
 import { dadosMaisAcessados } from '../Data/maisAcessados';
-
 import {
     BelezaESaude,
     ButtonNext,

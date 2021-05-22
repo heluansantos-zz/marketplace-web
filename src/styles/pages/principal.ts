@@ -53,6 +53,7 @@ export const CarouselButtomNext = styled.button`
         font-size: 3rem;
     }
 `
+
 export const Carousel = styled.div`
     width: 100%;
     height: 240px;
