@@ -61,6 +61,7 @@ export interface ContextData {
   setDigitoConta: (value: string) => void;
   updateTheme: (value: number) => void;
   defineStep: (value: number) => void;
+  signIn: (value: number) => void;
   prevStep: any;
   
 }

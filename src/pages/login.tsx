@@ -35,8 +35,20 @@ const Home: React.FC = () => {
     email,
     senha,
     setEmail,
-    setSenha
+    setSenha,
+    signIn
   } = useContext(Context)
+
+  async function SignIn(){
+    try{
+      // Function signIn
+      signIn;
+    }catch(err){
+      // Error
+      console.log('Erro na autenticação: ', err)
+    }
+  }
+
   return (
     <Container>
       <Head>
