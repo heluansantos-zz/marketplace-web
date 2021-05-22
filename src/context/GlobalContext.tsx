@@ -50,6 +50,10 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
         }
     }
 
+    const signIn = () => {
+        console.log('Function Login')
+    }
+
     useEffect(() => {
         console.log('')
     }, [])
@@ -115,7 +119,8 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
             setDigitoAgencia,
             setNumeroConta,
             setDigitoConta,
-            prevStep
+            prevStep,
+            signIn
         }}>
             {children}
         </Context.Provider>
