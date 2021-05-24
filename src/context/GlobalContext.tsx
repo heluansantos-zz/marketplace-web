@@ -1,4 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useCallback, useEffect, useState } from 'react'
+import api from '../Data/api'
 import { ContextData, ContextProviderProps } from './interfaces'
 export const Context = createContext({} as ContextData)
 
@@ -50,9 +51,11 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
         }
     }
 
-    const signIn = () => {
+    const signIn = useCallback(async() => {
         console.log('Function Login')
-    }
+        // const response = await api.post();
+        // 
+    }, [])
 
     useEffect(() => {
         console.log('')
