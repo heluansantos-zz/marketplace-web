@@ -2,6 +2,7 @@ import React, { createContext, useCallback, useEffect, useState } from 'react'
 import api from '../Data/api'
 import { ContextData, ContextProviderProps } from './interfaces'
 export const Context = createContext({} as ContextData)
+import { useRouter } from 'next/router'
 
 const ContextProvider = ({ children }: ContextProviderProps) => {
     const [darkTheme] = useState(false)
@@ -39,6 +40,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
     const [digitoAgencia, setDigitoAgencia] = useState("");
     const [numeroConta, setNumeroConta] = useState("");
     const [digitoConta, setDigitoConta] = useState("");
+    const router = useRouter()
 
     const defineStep = (e: number) => {
         setPasso(e);
@@ -59,6 +61,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
 
     async function signUp(){
         try{
+            if(nomepf, cpf, emailpf, senhapf){
           const response = await api.post('/user',
           {
           first_name: nomepf,
@@ -69,7 +72,11 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
           }
         )
         alert('Conta criada com sucesso. Agora faça login!');
+        router.push('/');
         return response;
+        }else{
+            console.log('Os dados não chegaram por completo a essa fase: ',nomepf, cpf, emailpf, senhapf)
+        }
         }catch(err){
             console.log(err);
           alert('Erro na criação do usuário. ');

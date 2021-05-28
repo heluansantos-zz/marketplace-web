@@ -114,7 +114,7 @@ const Cadastro: React.FC = () => {
             <Termos>
               <p>Ao criar uma conta, você está ciente dos <b> <LinkTermo href=""> Termos de Uso</LinkTermo></b> e <b> <LinkTermo href=""> Política de Privacidade.</LinkTermo></b></p>
             </Termos>
-            <Entrar href="/" onClick={()=> signUp()}>Criar sua conta</Entrar>
+            <Entrar onClick={()=> signUp()}>Criar sua conta</Entrar>
             <CadastreSe>
               <p>Já possui uma conta?</p> <a href="/">Entrar</a>
             </CadastreSe>
