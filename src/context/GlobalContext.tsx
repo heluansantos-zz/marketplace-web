@@ -61,7 +61,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
 
     async function signUp(){
         try{
-            if(nomepf, cpf, emailpf, senhapf){
+            if(nomepf && cpf && emailpf && senhapf){
           const response = await api.post('/user',
           {
           first_name: nomepf,
