@@ -52,6 +52,35 @@ export default function Cadastro() {
     defineStep
   } = useContext(Context);
 
+  const state = [
+    {id: 0, sigla: 'AC'},
+    {id: 1, sigla: 'AP'},
+    {id: 2, sigla: 'AM'},
+    {id: 3, sigla: 'BA'},
+    {id: 4, sigla: 'CE'},
+    {id: 5, sigla: 'DF'},
+    {id: 6, sigla: 'ES'},
+    {id: 7, sigla: 'GO'},
+    {id: 8, sigla: 'MA'},
+    {id: 9, sigla: 'MT'},
+    {id: 10, sigla: 'MS'},
+    {id: 11, sigla: 'MG'},
+    {id: 12, sigla: 'PA'},
+    {id: 13, sigla: 'PB'},
+    {id: 14, sigla: 'PR'},
+    {id: 15, sigla: 'PE'},
+    {id: 16, sigla: 'PI'},
+    {id: 17, sigla: 'RJ'},
+    {id: 18, sigla: 'RN'},
+    {id: 19, sigla: 'RS'},
+    {id: 20, sigla: 'RO'},
+    {id: 21, sigla: 'RR'},
+    {id: 22, sigla: 'SC'},
+    {id: 23, sigla: 'SP'},
+    {id: 24, sigla: 'SE'},
+    {id: 25, sigla: 'TO'},
+  ]
+
   return (
     <>
       <Wellcome>
@@ -69,11 +98,19 @@ export default function Cadastro() {
       <Date>
         <Item>
           <Title>Nome</Title>
-          <Input placeholder="Insira o nome do titular" type="text" value={nomePj} onChange={(e) => setNomePj(e.target.value)} />
+          <Input 
+            placeholder="Insira o nome do titular" 
+            type="text" value={nomePj} 
+            onChange={(e) => 
+            setNomePj(e.target.value)} />
         </Item>
         <Item>
           <Title>CNPJ ou CPF</Title>
-          <Input placeholder="Digite o número do CNPJ ou CPF do titular" type="text" value={cpfPJ} onChange={(e) => setCpfPj(e.target.value)} />
+          <Input 
+            placeholder="Digite o número do CNPJ ou CPF do titular" 
+            type="text" 
+            value={cpfPJ} 
+            onChange={(e) => setCpfPj(e.target.value)} />
         </Item>
         <Items>
           <SelectBanco>

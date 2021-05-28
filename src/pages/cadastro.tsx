@@ -31,6 +31,7 @@ import {
   Data
 } from '../styles/pages/Cadastro';
 import { Context } from '../context/GlobalContext';
+import api from '../Data/api';
 
 const Cadastro: React.FC = () => {
   const router = useRouter()
@@ -45,8 +46,10 @@ const Cadastro: React.FC = () => {
     setCpf,
     setDataNasc,
     setEmailPf,
-    setSenhaPf
+    setSenhaPf,
+    signUp,
   } = useContext(Context);
+
   return (
     <Container>
       <Head>
@@ -70,24 +73,39 @@ const Cadastro: React.FC = () => {
             <Date>
               <Item>
                 <Title>Nome</Title>
-                <Input placeholder="Insira seu nome" value={nomepf} onChange={(e) => setNomePf(e.target.value)} />
+                <Input 
+                  placeholder="Insira seu nome" 
+                  value={nomepf} 
+                  onChange={(e) => setNomePf(e.target.value)} />
               </Item>
               <Item>
                 <Title>CPF</Title>
-                <Input placeholder="000.000.000-00" value={cpf} onChange={(e) => setCpf(e.target.value)} />
+                <Input 
+                  placeholder="000.000.000-00" 
+                  value={cpf} 
+                  onChange={(e) => setCpf(e.target.value)} />
               </Item>
               <Data>
                 <Title>Data de Nascimento</Title>
-                <Input placeholder="Selecione uma data" value={dataNasc} onChange={(e) => setDataNasc(e.target.value)} />
+                <Input 
+                  placeholder="Selecione uma data" 
+                  value={dataNasc} 
+                  onChange={(e) => setDataNasc(e.target.value)} />
                 <BiCalendarAlt />
               </Data>
               <Item>
                 <Title>Email</Title>
-                <Input placeholder="Insira sua senha" value={emailpf} onChange={(e) => setEmailPf(e.target.value)} />
+                <Input 
+                  placeholder="Insira sua senha" 
+                  value={emailpf} 
+                  onChange={(e) => setEmailPf(e.target.value)} />
               </Item>
               <Item>
                 <Title>Senha</Title>
-                <Input placeholder="Insira sua senha" type="password" value={senhapf} onChange={(e) => setSenhaPf(e.target.value)} />
+                <Input 
+                  placeholder="Insira sua senha" 
+                  type="password" value={senhapf} 
+                  onChange={(e) => setSenhaPf(e.target.value)} />
                 <Aviso>
                   <BiInfoCircle /><p>A senha deve possuir pelo menos 6 caracteres</p>
                 </Aviso>
@@ -96,7 +114,7 @@ const Cadastro: React.FC = () => {
             <Termos>
               <p>Ao criar uma conta, você está ciente dos <b> <LinkTermo href=""> Termos de Uso</LinkTermo></b> e <b> <LinkTermo href=""> Política de Privacidade.</LinkTermo></b></p>
             </Termos>
-            <Entrar href="/">Criar sua conta</Entrar>
+            <Entrar href="/" onClick={()=> signUp()}>Criar sua conta</Entrar>
             <CadastreSe>
               <p>Já possui uma conta?</p> <a href="/">Entrar</a>
             </CadastreSe>

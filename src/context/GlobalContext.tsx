@@ -57,9 +57,29 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
         // 
     }, [])
 
+    async function signUp(){
+        try{
+          const response = await api.post('/user',
+          {
+          first_name: nomepf,
+          cpf,
+          email: emailpf,
+          password: senhapf,
+          confirm_password: senhapf,
+          }
+        )
+        alert('Conta criada com sucesso. Agora faça login!');
+        return response;
+        }catch(err){
+            console.log(err);
+          alert('Erro na criação do usuário. ');
+        }
+      }
+
     useEffect(() => {
         console.log('')
     }, [])
+
     const updateTheme = (index: number) => {
         console.log(darkTheme)
     }
@@ -123,7 +143,8 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
             setNumeroConta,
             setDigitoConta,
             prevStep,
-            signIn
+            signIn,
+            signUp
         }}>
             {children}
         </Context.Provider>

@@ -62,6 +62,7 @@ export interface ContextData {
   updateTheme: (value: number) => void;
   defineStep: (value: number) => void;
   signIn: (value: number) => void;
+  signUp: () => void;
   prevStep: any;
   
 }
