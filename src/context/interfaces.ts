@@ -71,6 +71,14 @@ export interface ContextData {
     verify_number: number,
     cardholder: number,
   ) => void;
+  cadAddress: (
+    uf: number,
+    cep: number,
+    address: number,
+    district: number,
+    number: number,
+    city: number,
+  ) => void;
   prevStep: any;
   
 }

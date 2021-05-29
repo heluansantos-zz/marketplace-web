@@ -121,6 +121,30 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
         }
       }
 
+      async function cadAddress({
+        uf,
+        cep,
+        address,
+        district,
+        number,
+        city
+    }){
+      try{
+        const response = await api.put(`/address`, {
+            uf,
+            cep,
+            address,
+            district,
+            number,
+            city
+        })
+      alert('Endereço cadastrado com sucesso!');
+      }catch(err){
+          console.log(err);
+        alert('Erro ao cadastrar endereço. ');
+      }
+    }
+
     useEffect(() => {
         console.log('')
     }, [])
@@ -192,6 +216,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
             signUp,
             deleteUser,
             cadCreditCard,
+            cadAddress,
         }}>
             {children}
         </Context.Provider>
