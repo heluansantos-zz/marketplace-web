@@ -53,33 +53,41 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
         }
     }
 
-    const signIn = useCallback(async() => {
-        console.log('Function Login')
-        // const response = await api.post();
-        // 
-    }, [])
+    async function signIn(name: string) {
+      try{
+        await api.get(`/user/${name}`)
+      alert('Você está logado no sistema!');
+      router.push('/');
+      } catch (err){
+        console.log(err);
+        alert('Erro na tentativa de login, verifique seus dados corretamente!');
+      }
+    }
 
     async function signUp({
         first_name,
+        last_name,
         cpf,
         email,
         password,
         confirm_password,
+        birth_date,
     }){
         try{
-          const response = await api.post('/user',
+          await api.post('/user',
           {
           first_name,
+          last_name,
           cpf,
           email,
           password,
           confirm_password,
+          birth_date,
           }
         )
         alert('Conta criada com sucesso. Agora faça login!');
         router.push('/');
-        return response;
-        }catch(err){
+        }catch(err) {
             console.log(err);
           alert('Erro na criação do usuário. ');
         }
@@ -104,7 +112,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
         )
         alert('Dados do usuário atualizados!');
         return response;
-        }catch(err){
+        } catch(err) {
             console.log(err);
           alert('Erro na atualização dos dados do usuário. ');
         }

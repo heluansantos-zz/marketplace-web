@@ -61,13 +61,15 @@ export interface ContextData {
   setDigitoConta: (value: string) => void;
   updateTheme: (value: number) => void;
   defineStep: (value: number) => void;
-  signIn: (value: number) => void;
+  signIn: (name: string) => void;
   signUp: (
     first_name: string,
+    last_name: string,
     cpf: string,
     email: string,
     password: string,
     confirm_password: string,
+    birth_date: string,
   ) => void;
   deleteUser: (value: number) => void;
   updateUser: (

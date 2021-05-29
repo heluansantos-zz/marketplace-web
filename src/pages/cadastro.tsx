@@ -50,6 +50,16 @@ const Cadastro: React.FC = () => {
     signUp,
   } = useContext(Context);
 
+  function createAccount() {
+    const last_name = 'Teste';
+    const date = '2021/05/29'
+    const name = 'Teste99';
+    const cpfx = "45397081043";
+    const email = 'teste99@gmail.com';
+    const senha = 'Teste99';
+    signUp(name,last_name, cpfx, email, senha, senha, date);
+  }
+
   return (
     <Container>
       <Head>
@@ -114,7 +124,7 @@ const Cadastro: React.FC = () => {
             <Termos>
               <p>Ao criar uma conta, você está ciente dos <b> <LinkTermo href=""> Termos de Uso</LinkTermo></b> e <b> <LinkTermo href=""> Política de Privacidade.</LinkTermo></b></p>
             </Termos>
-            <Entrar onClick={()=> signUp()}>Criar sua conta</Entrar>
+            <Entrar onClick={()=> createAccount()}>Criar sua conta</Entrar>
             <CadastreSe>
               <p>Já possui uma conta?</p> <a href="/">Entrar</a>
             </CadastreSe>
