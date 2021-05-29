@@ -63,6 +63,7 @@ export interface ContextData {
   defineStep: (value: number) => void;
   signIn: (value: number) => void;
   signUp: () => void;
+  deleteUser: (value: number) => void;
   prevStep: any;
   
 }

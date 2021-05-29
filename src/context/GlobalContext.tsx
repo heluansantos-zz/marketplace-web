@@ -83,6 +83,21 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
         }
       }
 
+      async function deleteUser(id: number){
+        try{
+          const response = await api.post('/user',
+          {
+          name: id,
+          }
+        )
+        alert('Usuário excluido com sucesso!');
+        return response;
+        }catch(err){
+            console.log(err);
+          alert('Erro ao deletar usuário. ');
+        }
+      }
+
     useEffect(() => {
         console.log('')
     }, [])
@@ -151,7 +166,8 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
             setDigitoConta,
             prevStep,
             signIn,
-            signUp
+            signUp,
+            deleteUser,
         }}>
             {children}
         </Context.Provider>
