@@ -64,6 +64,13 @@ export interface ContextData {
   signIn: (value: number) => void;
   signUp: () => void;
   deleteUser: (value: number) => void;
+  cadCreditCard: (
+    user_id: number,
+    number_card: number,
+    validate_date: number,
+    verify_number: number,
+    cardholder: number,
+  ) => void;
   prevStep: any;
   
 }

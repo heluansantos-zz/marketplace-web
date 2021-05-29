@@ -98,6 +98,29 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
         }
       }
 
+      async function cadCreditCard({
+          user_id,
+          number_card,
+          validate_date,
+          verify_number,
+          cardholder
+      }){
+        try{
+          const response = await api.put(`/creditCard/`, {
+            user_id,
+            number_card,
+            validate_date,
+            verify_number,
+            cardholder,
+          })
+        alert('Card cadastrado com sucesso!');
+        return response;
+        }catch(err){
+            console.log(err);
+          alert('Erro ao cadastrar card. ');
+        }
+      }
+
     useEffect(() => {
         console.log('')
     }, [])
@@ -168,6 +191,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
             signIn,
             signUp,
             deleteUser,
+            cadCreditCard,
         }}>
             {children}
         </Context.Provider>
