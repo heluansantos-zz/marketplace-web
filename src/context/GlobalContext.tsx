@@ -59,27 +59,54 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
         // 
     }, [])
 
-    async function signUp(){
+    async function signUp({
+        first_name,
+        cpf,
+        email,
+        password,
+        confirm_password,
+    }){
         try{
-            if(nomepf && cpf && emailpf && senhapf){
           const response = await api.post('/user',
           {
-          first_name: nomepf,
+          first_name,
           cpf,
-          email: emailpf,
-          password: senhapf,
-          confirm_password: senhapf,
+          email,
+          password,
+          confirm_password,
           }
         )
         alert('Conta criada com sucesso. Agora faça login!');
         router.push('/');
         return response;
-        }else{
-            console.log('Os dados não chegaram por completo a essa fase: ',nomepf, cpf, emailpf, senhapf)
-        }
         }catch(err){
             console.log(err);
           alert('Erro na criação do usuário. ');
+        }
+      }
+
+      async function updateUser({
+        first_name,
+        cpf,
+        email,
+        password,
+        confirm_password,
+      }){
+        try{
+          const response = await api.put('/user',
+          {
+          first_name,
+          cpf,
+          email,
+          password,
+          confirm_password,
+          }
+        )
+        alert('Dados do usuário atualizados!');
+        return response;
+        }catch(err){
+            console.log(err);
+          alert('Erro na atualização dos dados do usuário. ');
         }
       }
 
@@ -139,6 +166,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
             city
         })
       alert('Endereço cadastrado com sucesso!');
+      return response;
       }catch(err){
           console.log(err);
         alert('Erro ao cadastrar endereço. ');
@@ -215,6 +243,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
             signIn,
             signUp,
             deleteUser,
+            updateUser,
             cadCreditCard,
             cadAddress,
         }}>

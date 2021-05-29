@@ -62,8 +62,21 @@ export interface ContextData {
   updateTheme: (value: number) => void;
   defineStep: (value: number) => void;
   signIn: (value: number) => void;
-  signUp: () => void;
+  signUp: (
+    first_name: string,
+    cpf: string,
+    email: string,
+    password: string,
+    confirm_password: string,
+  ) => void;
   deleteUser: (value: number) => void;
+  updateUser: (
+    first_name: string,
+    cpf: string,
+    email: string,
+    password: string,
+    confirm_password: string,
+  ) => void;
   cadCreditCard: (
     user_id: number,
     number_card: number,
